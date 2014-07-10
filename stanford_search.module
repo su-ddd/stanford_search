@@ -1,0 +1,59 @@
+<?php
+
+function stanford_search_init() {
+  $settings = array(
+    'id' => variable_get('stanford_search_engine_id', ''),
+  );
+  drupal_add_js(array('stanford_search' => $settings), 'setting');
+}
+
+function stanford_search_menu() {
+  $items = array();
+
+  $items['search'] = array(
+    'title'           => 'Search',
+	'page callback'   => 'stanford_search_search_page',
+	'access callback' => TRUE,
+  );
+
+  $items['admin/config/search/stanford_search'] = array(
+    'title' => 'Stanford Search',
+    'type' => MENU_NORMAL_ITEM,
+    'description' => 'Administer Google Custom Search Engine',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('stanford_search_admin_settings'),
+    'access arguments' => array('administer site configuration'),
+    'file' => 'stanford_search.admin.inc',
+  );
+
+  return $items;
+}
+
+function stanford_search_search_page() {
+  $output = '<gcse:search linktarget="_parent" queryparametername="q_as"></gcse:search>';
+  return $output;
+}
+
+function stanford_search_block_info() {
+  $blocks['stanford_search_search'] = array(
+    'info' => t('Search box'),
+	'status' => TRUE,
+	'region' => 'search_box',
+	'visibility' => BLOCK_VISIBILITY_NOTLISTED,
+	'pages' => 'search',
+  );
+
+  return $blocks;
+}
+
+function stanford_search_block_view($delta = '') {
+  switch ($delta) {
+    case 'stanford_search_search':
+      global $base_url;
+	  $block['content'] = array(
+	    '#markup' => '<gcse:searchbox-only linktarget="' . $base_url . '" queryparametername="q_as"></gcse:searchbox-only>',
+      );
+	  break;
+  }
+  return $block;
+}

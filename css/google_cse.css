@@ -1,0 +1,26 @@
+/* Google Custom Search Box */
+#nav-search {margin-right: 30px;}
+#nav-search .gsc-control-searchbox-only {padding-top: 5px;}
+#nav-search #gsc-iw-id1 {width: 150px; position: relative; float: right;}
+#nav-search #gsc-i-id1 {width: 120px !important;}
+#nav-search .gsc-input {padding: 0;}
+#nav-search .gsib_b {position: absolute; z-index: 100; right: 0px; padding: 2px 0 0 0;} /* clear icon */
+#nav-search input.gsc-search-button {padding: 5px; margin: 0;}
+#nav-search td.gsc-search-button {position: absolute; z-index: 100; padding: 1px 0 0 5px;}
+#nav-search div.gsc-search-button {position: relative; margin: 0;}
+#nav-search .gsst_a {padding-top: 3px !important;}
+
+/* Google Custom Search Box on Search Results */
+.gsib_a .gsc-input {border: none !important; box-shadow: none !important; transition: none !important;}
+td.gsib_a {padding: 0 !important;}
+.gsc-search-box td, .gsc-search-box th {border: none !important;}
+.gsc-control-cse td, .gsc-control-cse th {border: none; padding: 0 !important;}
+.gsc-table-result, .gsc-thumbnail-inside, .gsc-url-top {padding: 0 !important;}
+.gsc-control-cse {background-color: #FBFBF9 !important; border-color: #FBFBF9 !important; font-family: "Source Sans Pro",Arial,Helvetica,sans-serif !important;}
+.cse .gsc-control-cse, .gsc-control-cse {padding: 0 !important;}
+.gs-webResult div.gs-visibleUrl, .gs-imageResult div.gs-visibleUrl {font-size: 14px !important;}
+table.gsc-branding td, table.gsc-branding, table.gcsc-branding td, table.gcsc-branding {display: none !important;}
+#gsc-i-id1 {margin: 2px 5px !important; width: 99% !important;}
+.gsst_a {padding-top: 6px !important;}
+a.gsst_a {border: none !important;}
+.gs-promotion {padding: 0 0.5em !important;}
