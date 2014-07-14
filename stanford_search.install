@@ -1,0 +1,29 @@
+<?php
+
+function stanford_search_requirements($phase) {
+  $requirements = array();
+  $t = get_t();
+
+  if ($phase == 'runtime') {
+    $id = trim(variable_get('stanford_search_engine_id', ''));
+	if (empty($id)) {
+      $requirements['stanford_search'] = array(
+        'title' => $t('Stanford Search - Google Custom Search Engine'),
+        'value' => $t('The engine&rsquo;s unique ID is not set.'),
+        'severity' => REQUIREMENT_ERROR,
+      );
+	} else {
+      $requirements['stanford_search'] = array(
+        'title' => $t('Stanford Search - Google Custom Search Engine'),
+        'value' => $t("The engine&rsquo;s unique ID is set to @id", array('@id' => $id)),
+        'severity' => REQUIREMENT_OK,
+      ); 
+    }
+  }
+
+  return $requirements;
+}
+
+function stanford_search_uninstall() {
+  variable_del('stanford_search_engine_id');
+}
