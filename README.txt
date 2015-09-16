@@ -45,7 +45,7 @@ First, create and configure the Google Custom Search Engine at https://www.googl
 -- Click "Save and Get Code"
 -- On the next page, click "Search Results Details" and enter https://<yourwebsite url>.stanford.edu/search
    (your website's URL + /search) as the complete URL of your site where you want the search results to appear.
--- Specify the query parameter as: "as_q"
+-- Specify the query parameter as: "q_as"
 -- Click Save
 - Under Business > Settings, select "do not show ads on results pages" if this is a stanford.edu website.
 - Under Look and Feel > Themes, choose Default
