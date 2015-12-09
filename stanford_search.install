@@ -17,7 +17,7 @@ function stanford_search_requirements($phase) {
         'title' => $t('Stanford Search - Google Custom Search Engine'),
         'value' => $t("The engine&rsquo;s unique ID is set to @id", array('@id' => $id)),
         'severity' => REQUIREMENT_OK,
-      ); 
+      );
     }
   }
 
@@ -26,4 +26,5 @@ function stanford_search_requirements($phase) {
 
 function stanford_search_uninstall() {
   variable_del('stanford_search_engine_id');
+  variable_del('stanford_search_engine_results_page');
 }
