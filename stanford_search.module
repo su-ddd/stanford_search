@@ -50,10 +50,11 @@ function stanford_search_block_view($delta = '') {
   switch ($delta) {
     case 'stanford_search_search':
       global $base_url;
-	  $block['content'] = array(
-	    '#markup' => '<gcse:searchbox-only linktarget="' . $base_url . '" queryparametername="q_as"></gcse:searchbox-only>',
+      $results_page_path = variable_get('stanford_search_engine_results_page','');
+      $block['content'] = array(
+        '#markup' => '<gcse:searchbox-only queryparametername="q_as" resultsUrl="' . $base_url . $results_page_path . '"></gcse:searchbox-only>',
       );
-	  break;
+    break;
   }
   return $block;
 }
