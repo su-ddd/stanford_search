@@ -40,23 +40,21 @@ First, create and configure the Google Custom Search Engine at https://www.googl
 
 - Choose the search engine you want to use under "Edit Search Engine"
 - Under Setup > Basics > Sites to search, list the domain of the sites you want to search
-- Under Setup > Admin, add any colleague with whom you want to share administration of the search engine 
+- Under Setup > Admin, add any colleague with whom you want to share administration of the search engine
 - Under Look and Feel > Layout, choose "Two page", then:
 -- Click "Save and Get Code"
--- On the next page, click "Search Results Details" and enter https://<yourwebsite url>.stanford.edu/search
-   (your website's URL + /search) as the complete URL of your site where you want the search results to appear.
 -- Specify the query parameter as: "q_as"
 -- Click Save
 - Under Business > Settings, select "do not show ads on results pages" if this is a stanford.edu website.
 - Under Look and Feel > Themes, choose Default
 - Under Look and Feel > Customize, choose the colors that best match your website
-- Under Setup > Basics, in the details, click the "Search Engine ID" button. You'll need this ID to configure the module. 
+- Under Setup > Basics, in the details, click the "Search Engine ID" button. You'll need this ID to configure the module.
   Your search engine's ID will be displayed in a pop-up. Copy and paste it into the configuration page for the module.
 
 Then, configure the module on your Drupal site  at Administer > Site Configuration > Search and Metadata > Stanford Search.
 
 - Enter the ID retrieved in the last step above
-
+- Enter your desired search results path with preceding slash, (e.g. /search)
 
 -- KNOWN ISSUES --
 
